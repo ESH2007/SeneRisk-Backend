@@ -1,0 +1,16 @@
+asgiref==3.12.1
+boto3==1.43.99
+botocore==1.43.99
+Django==6.1.1
+django-cors-headers==4.9.0
+django-storages==1.14.6
+djangorestframework==3.18.1
+jmespath==1.1.0
+pillow==12.3.0
+psycopg==3.3.6
+psycopg-binary==3.3.6
+python-dateutil==2.9.0.post0
+s3transfer==0.19.2
+six==1.17.0
+sqlparse==0.6.0
+urllib3==2.8.0
