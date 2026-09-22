@@ -26,7 +26,10 @@ SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY", "django-insecure-solo-desarroll
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get("DJANGO_DEBUG", "1") == "1"
 
-ALLOWED_HOSTS = os.environ.get("DJANGO_ALLOWED_HOSTS", "localhost,127.0.0.1,10.0.2.2").split(",")
+ALLOWED_HOSTS = [h.strip() for h in os.environ.get("DJANGO_ALLOWED_HOSTS", "localhost,127.0.0.1,10.0.2.2").split(",")]
+# Render define esta variable con el dominio *.onrender.com del servicio
+if _render_host := os.environ.get("RENDER_EXTERNAL_HOSTNAME"):
+    ALLOWED_HOSTS.append(_render_host)
 
 
 # Application definition
